@@ -52,6 +52,7 @@ gem "pg"
 gem "redcarpet"
 gem "simple_form"
 gem "stamp"
+
 group :production do
   gem "rails_12factor"
 end
