@@ -54,6 +54,7 @@ gem "simple_form"
 gem "stamp"
 gem "sidekiq"
 gem "ipsummer"
+gem "honeybadger"
 
 group :production do
   gem "rails_12factor"
