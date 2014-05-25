@@ -1,4 +1,5 @@
 SidekiqApp::Application.routes.draw do
-  get "home", to: "pages#home"
-  root to: "pages#home"
+  resources :articles
+
+  root to: "articles#index"
 end

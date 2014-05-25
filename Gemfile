@@ -52,6 +52,8 @@ gem "pg"
 gem "redcarpet"
 gem "simple_form"
 gem "stamp"
+gem "sidekiq"
+gem "ipsummer"
 
 group :production do
   gem "rails_12factor"
