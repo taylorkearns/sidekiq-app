@@ -4,8 +4,7 @@ class ArticlesController < ApplicationController
   end
 
   def update
-    @article = Article.find(params[:id])
-    @article.update_attributes(article_params)
+    ArticleUpdater.perform_async(params[:id], article_params)
     redirect_to articles_url
   end
 
