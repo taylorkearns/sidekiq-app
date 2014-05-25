@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
   end
 
   def update
-    ArticleUpdater.perform_async(params[:id], article_params)
+    ArticleUpdater.perform_in(3.seconds, params[:id], article_params)
     redirect_to articles_url
   end
 
