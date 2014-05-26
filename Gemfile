@@ -55,6 +55,7 @@ gem "stamp"
 gem "sidekiq"
 gem "ipsummer"
 gem "honeybadger"
+gem "sinatra"
 
 group :production do
   gem "rails_12factor"
