@@ -1,17 +1,28 @@
 @import "foundation_and_overrides"
 
-#articles
+#articles, #snippets
   padding: 30px
 
 article
   margin-bottom: 20px
 
+h1
+  font-size: 28px
+
+  a
+    font-size: 12px
+    font-weight: bold
+
 h2
   display: inline-block
   font-size: 24px
 
-input
+input, textarea
   border-radius: 3px
+
+textarea
+  width: 500px
+  height: 200px
 
 input[type=text]
   width: 200px
@@ -34,3 +45,12 @@ form.article
   input[type=submit]
     position: relative
     top: -1px
+
+#snippets
+  table.snippets
+    th.title
+      width: 20%
+
+    th.edit, td.edit
+      width: 80px
+      text-align: center

@@ -3,6 +3,7 @@ SidekiqApp::Application.routes.draw do
   mount Sidekiq::Web => "/jobs"
 
   resources :articles
+  resources :snippets
 
   root to: "articles#index"
 end

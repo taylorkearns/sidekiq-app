@@ -1,0 +1,13 @@
+#snippets
+  %h1
+    = @snippet.title
+    %span.edit
+      = link_to "Edit", edit_snippet_path(@snippet.id)
+
+  %h2 English
+
+  %p.english= @snippet.english
+
+  %h2 Icelandic
+
+  %p.icelandic= @snippet.icelandic

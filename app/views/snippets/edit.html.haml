@@ -1,0 +1,11 @@
+#snippets
+  %h1 Edit #{@snippet.title}
+
+  = simple_form_for @snippet do |f|
+    = f.input :title
+    = f.input :english
+
+    = label_tag "Icelandic"
+    %p.icelandic= @snippet.icelandic
+
+    = f.button :submit, "Update Snippet"

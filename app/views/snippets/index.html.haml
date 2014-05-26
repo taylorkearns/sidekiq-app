@@ -1,0 +1,20 @@
+#snippets
+  %h1
+    Snippets
+    %span.new
+      = link_to "New Snippet", new_snippet_path
+
+  %table.snippets
+    %thead
+      %th.title Title
+      %th.snippet English
+      %th.snippet Icelandic
+      %th.edit
+    %tbody
+    - @snippets.each do |snippet|
+      %tr
+        %td= snippet.title
+        %td= truncate(snippet.english, length: 200)
+        %td= truncate(snippet.icelandic, length: 200)
+        %td.edit
+          = link_to "Edit", edit_snippet_path(snippet)
