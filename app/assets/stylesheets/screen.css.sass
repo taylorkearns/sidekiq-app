@@ -1,25 +1,36 @@
 @import "foundation_and_overrides"
 
 #articles
-  h2
+  padding: 30px
+
+article
+  margin-bottom: 20px
+
+h2
+  display: inline-block
+  font-size: 24px
+
+input
+  border-radius: 3px
+
+input[type=text]
+  width: 200px
+  height: 30px
+
+input[type=submit]
+  padding: 5px
+  font-size: 12px
+  border-radius: 3px
+
+form.article
+  position: relative
+  top: -3px
+  display: inline-block
+  margin-left: 15px
+
+  .input
     display: inline-block
 
-  form.article
+  input[type=submit]
     position: relative
-    top: -8px
-    display: inline-block
-    margin-left: 15px
-
-    .input
-      display: inline-block
-
-    input
-      border-radius: 5px
-
-    input[type=text]
-      width: 300px
-
-    input[type=submit]
-      position: relative
-      top: 2px
-      padding: 9px
+    top: -1px

@@ -1,10 +1,11 @@
 #articles
   - @articles.each do |article|
 
-    %h2= article.title
+    %article
+      %h2= article.title
 
-    = simple_form_for :article, url: article_path(article.id), method: :put do |f|
-      = f.input :title, label: false, placeholder: "New title"
-      = f.button :submit, "Update"
+      = simple_form_for :article, url: article_path(article.id), method: :put do |f|
+        = f.input :title, label: false, placeholder: "New title"
+        = f.button :submit, "Update"
 
-    .body= article.body
+      .body= article.body
