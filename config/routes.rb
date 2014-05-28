@@ -5,5 +5,5 @@ SidekiqApp::Application.routes.draw do
   resources :articles
   resources :snippets
 
-  root to: "articles#index"
+  root to: "snippets#index"
 end
