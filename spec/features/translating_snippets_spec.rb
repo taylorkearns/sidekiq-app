@@ -5,7 +5,13 @@ describe "Translating snippets" do
     Sidekiq::Testing.inline!
     new_snippet_page.open
     new_snippet_page.fill_out_form
-    expect(snippet_page.icelandic).to_not be_blank
+
+    expect(snippet_page.icelandic.text).to_not be_blank
+    expect(snippet_page.arabic.text).to_not be_blank
+    expect(snippet_page.filipino.text).to_not be_blank
+    expect(snippet_page.haitian_creole.text).to_not be_blank
+    expect(snippet_page.maltese.text).to_not be_blank
+    expect(snippet_page.yiddish.text).to_not be_blank
   end
 
   def new_snippet_page

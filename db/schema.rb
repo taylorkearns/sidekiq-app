@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140526162152) do
+ActiveRecord::Schema.define(version: 20140528002147) do
 
   create_table "articles", force: true do |t|
     t.string   "title"
@@ -26,6 +26,11 @@ ActiveRecord::Schema.define(version: 20140526162152) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "title"
+    t.text     "arabic"
+    t.text     "filipino"
+    t.text     "haitian_creole"
+    t.text     "maltese"
+    t.text     "yiddish"
   end
 
 end

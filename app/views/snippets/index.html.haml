@@ -9,6 +9,11 @@
       %th.title Title
       %th.snippet English
       %th.snippet Icelandic
+      %th.snippet Arabic
+      %th.snippet Filipino
+      %th.snippet Haitian Creole
+      %th.snippet Maltese
+      %th.snippet Yiddish
       %th.edit
     %tbody
     - @snippets.each do |snippet|
@@ -16,5 +21,10 @@
         %td= snippet.title
         %td= truncate(snippet.english, length: 200)
         %td= truncate(snippet.icelandic, length: 200)
+        %td= truncate(snippet.arabic, length: 200)
+        %td= truncate(snippet.filipino, length: 200)
+        %td= truncate(snippet.haitian_creole, length: 200)
+        %td= truncate(snippet.maltese, length: 200)
+        %td= truncate(snippet.yiddish, length: 200)
         %td.edit
           = link_to "Edit", edit_snippet_path(snippet)
