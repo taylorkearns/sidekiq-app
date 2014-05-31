@@ -10,7 +10,7 @@ class SnippetsController < ApplicationController
   def create
     @snippet = Snippet.new(snippet_params)
     if @snippet.save!
-      Translator.perform_async(@snippet.id)
+      Translator.new(@snippet.id).get_translation
       redirect_to snippet_path(@snippet.id)
     else
       render :new
@@ -28,7 +28,7 @@ class SnippetsController < ApplicationController
   def update
     @snippet = Snippet.find(params[:id])
     if @snippet.update_attributes!(snippet_params)
-      Translator.perform_async(@snippet.id)
+      Translator.new(@snippet.id).get_translation
       redirect_to snippet_path(@snippet.id)
     else
       render :edit

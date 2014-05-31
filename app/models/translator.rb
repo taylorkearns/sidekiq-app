@@ -1,6 +1,4 @@
 class Translator
-  include Sidekiq::Worker
-
   module LanguageCode
     ICELANDIC      = "is"
     ARABIC         = "ar"
@@ -10,13 +8,18 @@ class Translator
     YIDDISH        = "yi"
   end
 
-  def perform(snippet_id)
+  attr_reader :snippet_id
+
+  def initialize(snippet_id)
+    @snippet_id = snippet_id
+  end
+
+  def get_translation
     snippet = Snippet.find(snippet_id)
     ["icelandic", "arabic", "filipino",
      "haitian_creole", "maltese", "yiddish"].each do |target|
       translation = translate(snippet.english, target)
       snippet.public_send("#{target}=", translation)
-      logger.info "Translation to #{target} completed"
     end
 
     snippet.save!
